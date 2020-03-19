@@ -14,12 +14,7 @@ namespace EfDataAccess
         public DbSet<Maker> Makers { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
 
-        //public Context(DbContextOptions<Context> options) : base(options) { }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-CF3GPEA\SQLEXPRESS;Initial Catalog=ZadatakWM;Integrated Security=True");
-        }
+        public Context(DbContextOptions<Context> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
