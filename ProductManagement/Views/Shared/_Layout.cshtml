@@ -28,6 +28,10 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            @if(TempData["Msg"] != null)
+            {
+                <h5 style="color: green">@TempData["Msg"]</h5>
+            }
             @RenderBody()
         </main>
     </div>

@@ -32,6 +32,8 @@ namespace ProductManagement
 
             //ProductSql
             services.AddTransient<IGetProductsCommand, EfGetProductsCommand>();
+            services.AddTransient<IGetProductInsertData, EfGetProductInsertData>();
+            services.AddTransient<ICreateProductCommand, EfCreateProductCommand>();
 
             services.AddControllersWithViews();
         }
