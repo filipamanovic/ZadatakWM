@@ -21,6 +21,7 @@ namespace EfCommands.ProductCommands
             var query = _context.Products.AsQueryable();
             return query.Select(p => new ProductDto
             {
+                Id = p.Id,
                 ProductName = p.ProductName,
                 Description = p.Description,
                 Price = p.Price,

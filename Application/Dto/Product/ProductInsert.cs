@@ -9,6 +9,7 @@ namespace Application.Dto.Product
 {
     public class ProductInsert
     {
+        public int Id { get; set; }
         [Required]    
         [MaxLength(50, ErrorMessage = "Max length 50 caractes")]
         public string ProductName { get; set; }
