@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Application.Commands.ProductCommands
 {
-    public interface IGetProductCommand : ICommand<int, ProductInsert>
+    public interface IGetProductCommand : ICommand<long, ProductInsert>
     {
     }
 }

@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Commands;
 using Application.Commands.ProductCommands;
 using EfCommands.ProductCommands;
 using EfDataAccess;
+using JsonCommands.ProductCommands;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,12 +32,23 @@ namespace ProductManagement
             services.AddDbContextPool<Context>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
 
+            ////To change inmlementation comment/uncomment sql and json commands////
+
             //ProductSql
             services.AddTransient<IGetProductsCommand, EfGetProductsCommand>();
             services.AddTransient<IGetProductInsertData, EfGetProductInsertData>();
             services.AddTransient<ICreateProductCommand, EfCreateProductCommand>();
             services.AddTransient<IGetProductCommand, EfGetProductCommand>();
             services.AddTransient<IEditProductCommand, EfEditProductCommand>();
+          
+            //ProductJson
+            /*
+            services.AddTransient<IGetProductsCommand, JsonGetProductsCommand>();
+            services.AddTransient<IGetProductInsertData, JsonGetProductInsertData>();
+            services.AddTransient<ICreateProductCommand, JsonCreateProductCommand>();
+            services.AddTransient<IGetProductCommand, JsonGetProductCommand>();
+            services.AddTransient<IEditProductCommand, JsonEditProductCommand>();
+            */
 
             services.AddControllersWithViews();
         }

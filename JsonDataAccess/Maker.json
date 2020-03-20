@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "MakerName": "Maker 1"
+  },
+  {
+    "Id": 2,
+    "MakerName": "Maker 2"
+  },
+  {
+    "Id": 3,
+    "MakerName": "Maker 3"
+  }
+]

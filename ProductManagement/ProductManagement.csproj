@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Json\Product.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
   </ItemGroup>
 
@@ -12,6 +16,13 @@
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\EfCommands\EfCommands.csproj" />
     <ProjectReference Include="..\EfDataAccess\EfDataAccess.csproj" />
+    <ProjectReference Include="..\JsonCommands\JsonCommands.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Json\Product.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 

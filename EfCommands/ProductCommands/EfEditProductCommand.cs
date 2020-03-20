@@ -17,7 +17,9 @@ namespace EfCommands.ProductCommands
 
         public void Execute(ProductInsert request)
         {
-            var product = _context.Products.Find(request.Id);
+            int requestIntId = Convert.ToInt32(request.Id);
+
+            var product = _context.Products.Find(requestIntId);
             if (product == null)
                 throw new EntityNotFoundException("Product");
         

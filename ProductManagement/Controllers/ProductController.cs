@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Commands;
 using Application.Commands.ProductCommands;
 using Application.Dto.Product;
 using Application.Exceptions;
@@ -19,7 +20,8 @@ namespace ProductManagement.Controllers
         private readonly IEditProductCommand _editProduct;
 
         public ProductController(IGetProductsCommand getProducts, IGetProductInsertData getProductInsertData, 
-            ICreateProductCommand createProduct, IGetProductCommand getProduct, IEditProductCommand editProduct)
+            ICreateProductCommand createProduct, IGetProductCommand getProduct, 
+            IEditProductCommand editProduct)
         {
             _getProducts = getProducts;
             _getProductInsertData = getProductInsertData;
@@ -69,7 +71,7 @@ namespace ProductManagement.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int Id)
+        public IActionResult Edit(long Id)
         {
             try
             {
@@ -90,7 +92,7 @@ namespace ProductManagement.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(int Id, ProductInsert productInsert)
+        public IActionResult Edit(long Id, ProductInsert productInsert)
         {
             productInsert.Id = Id;
 

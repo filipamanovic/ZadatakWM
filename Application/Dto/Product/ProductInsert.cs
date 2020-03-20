@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-using System.Web.Mvc;
 
 namespace Application.Dto.Product
 {
     public class ProductInsert
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         [Required]    
         [MaxLength(50, ErrorMessage = "Max length 50 caractes")]
         public string ProductName { get; set; }

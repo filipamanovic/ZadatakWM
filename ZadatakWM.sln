@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{18BB2A05-FFEE-4363-B89A-2E69C665D3D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{18BB2A05-FFEE-4363-B89A-2E69C665D3D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfDataAccess", "EfDataAccess\EfDataAccess.csproj", "{DB7D5E9A-2DDE-454F-AAA3-DCEBE83536E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfDataAccess", "EfDataAccess\EfDataAccess.csproj", "{DB7D5E9A-2DDE-454F-AAA3-DCEBE83536E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{07F7FC2D-68DE-4B83-972C-3D85E24C0BC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{07F7FC2D-68DE-4B83-972C-3D85E24C0BC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCommands", "EfCommands\EfCommands.csproj", "{9B78EBD8-004E-43EB-8060-F28D88A950C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCommands", "EfCommands\EfCommands.csproj", "{9B78EBD8-004E-43EB-8060-F28D88A950C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagement", "ProductManagement\ProductManagement.csproj", "{5AB35347-5BE8-4C00-B8CB-DCC0A570643B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManagement", "ProductManagement\ProductManagement.csproj", "{5AB35347-5BE8-4C00-B8CB-DCC0A570643B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonDataAccess", "JsonDataAccess\JsonDataAccess.csproj", "{D76DF0F7-1B11-4095-9341-EA5D68F38DAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonCommands", "JsonCommands\JsonCommands.csproj", "{CD11140A-DFDF-462A-BAC3-F8E52483FB3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{5AB35347-5BE8-4C00-B8CB-DCC0A570643B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AB35347-5BE8-4C00-B8CB-DCC0A570643B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AB35347-5BE8-4C00-B8CB-DCC0A570643B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76DF0F7-1B11-4095-9341-EA5D68F38DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76DF0F7-1B11-4095-9341-EA5D68F38DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76DF0F7-1B11-4095-9341-EA5D68F38DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76DF0F7-1B11-4095-9341-EA5D68F38DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD11140A-DFDF-462A-BAC3-F8E52483FB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD11140A-DFDF-462A-BAC3-F8E52483FB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD11140A-DFDF-462A-BAC3-F8E52483FB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD11140A-DFDF-462A-BAC3-F8E52483FB3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
