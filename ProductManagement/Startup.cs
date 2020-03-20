@@ -40,7 +40,7 @@ namespace ProductManagement
             services.AddTransient<ICreateProductCommand, EfCreateProductCommand>();
             services.AddTransient<IGetProductCommand, EfGetProductCommand>();
             services.AddTransient<IEditProductCommand, EfEditProductCommand>();
-          
+
             //ProductJson
             /*
             services.AddTransient<IGetProductsCommand, JsonGetProductsCommand>();
@@ -49,6 +49,7 @@ namespace ProductManagement
             services.AddTransient<IGetProductCommand, JsonGetProductCommand>();
             services.AddTransient<IEditProductCommand, JsonEditProductCommand>();
             */
+
 
             services.AddControllersWithViews();
         }
