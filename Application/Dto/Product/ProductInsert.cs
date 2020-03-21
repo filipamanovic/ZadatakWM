@@ -22,7 +22,7 @@ namespace Application.Dto.Product
         public int CategoryId { get; set; }
         [Display(Name = "Supplier")]
         public int SupplierId { get; set; }
-        [Display(Name = "Market")]
+        [Display(Name = "Maker")]
         public int MakerId { get; set; }
     }
 }

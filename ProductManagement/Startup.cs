@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands;
+using Application.Commands.CategoryCommands;
+using Application.Commands.MakerCommands;
 using Application.Commands.ProductCommands;
+using Application.Commands.SupplierCommands;
+using EfCommands.CategoryCommands;
+using EfCommands.MakerCommands;
 using EfCommands.ProductCommands;
+using EfCommands.SupplierCommands;
 using EfDataAccess;
+using JsonCommands.CategoryCommands;
+using JsonCommands.MakerCommands;
 using JsonCommands.ProductCommands;
+using JsonCommands.SupplierCommands;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,20 +45,24 @@ namespace ProductManagement
 
             //ProductSql
             services.AddTransient<IGetProductsCommand, EfGetProductsCommand>();
-            services.AddTransient<IGetProductInsertData, EfGetProductInsertData>();
-            services.AddTransient<ICreateProductCommand, EfCreateProductCommand>();
-            services.AddTransient<IGetProductCommand, EfGetProductCommand>();
-            services.AddTransient<IEditProductCommand, EfEditProductCommand>();
+            //services.AddTransient<IGetProductInsertData, EfGetProductInsertData>();
+            //services.AddTransient<ICreateProductCommand, EfCreateProductCommand>();
+            //services.AddTransient<IGetProductCommand, EfGetProductCommand>();
+            //services.AddTransient<IEditProductCommand, EfEditProductCommand>();
+            //services.AddTransient<ICreateCategoryCommand, EfCreateCategoryCommand>();
+            //services.AddTransient<ICreateMakerCommand, EfCreateMakerCommand>();
+            //services.AddTransient<ICreateSupplierCommand, EfCreateSupplierCommand>();
 
             //ProductJson
-            /*
+
             services.AddTransient<IGetProductsCommand, JsonGetProductsCommand>();
             services.AddTransient<IGetProductInsertData, JsonGetProductInsertData>();
             services.AddTransient<ICreateProductCommand, JsonCreateProductCommand>();
             services.AddTransient<IGetProductCommand, JsonGetProductCommand>();
             services.AddTransient<IEditProductCommand, JsonEditProductCommand>();
-            */
-
+            services.AddTransient<ICreateCategoryCommand, JsonCreateCategoryCommand>();
+            services.AddTransient<ICreateMakerCommand, JsonCreateMakerCommand>();
+            services.AddTransient<ICreateSupplierCommand, JsonCreateSupplierCommand>();
 
             services.AddControllersWithViews();
         }

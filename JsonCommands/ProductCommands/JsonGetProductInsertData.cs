@@ -1,5 +1,8 @@
 ﻿using Application.Commands.ProductCommands;
+using Application.Dto.Category;
+using Application.Dto.Maker;
 using Application.Dto.Product;
+using Application.Dto.Supplier;
 using Domain;
 using Newtonsoft.Json;
 using System;
@@ -19,9 +22,9 @@ namespace JsonCommands.ProductCommands
             var makerJson = File.ReadAllText(@"..\JsonDataAccess\Maker.json");
             return new ProductInsertData
             {
-                Categories = JsonConvert.DeserializeObject<List<Category>>(categoryJson),
-                Makers = JsonConvert.DeserializeObject<List<Maker>>(makerJson),
-                Suppliers = JsonConvert.DeserializeObject<List<Supplier>>(supplerJson)
+                Categories = JsonConvert.DeserializeObject<List<CategoryDto>>(categoryJson),
+                Makers = JsonConvert.DeserializeObject<List<MakerDto>>(makerJson),
+                Suppliers = JsonConvert.DeserializeObject<List<SupplierDto>>(supplerJson)
             };
 
         }

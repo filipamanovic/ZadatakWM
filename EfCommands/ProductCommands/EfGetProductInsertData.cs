@@ -1,6 +1,8 @@
 ﻿using Application.Commands.ProductCommands;
+using Application.Dto.Category;
+using Application.Dto.Maker;
 using Application.Dto.Product;
-using Domain;
+using Application.Dto.Supplier;
 using EfDataAccess;
 using System;
 using System.Collections.Generic;
@@ -19,17 +21,17 @@ namespace EfCommands.ProductCommands
         {
             return new ProductInsertData
             {
-                Categories = _context.Categories.Select(c => new Category 
+                Categories = _context.Categories.Select(c => new CategoryDto 
                 {
                     CategoryName = c.CategoryName,
                     Id = c.Id
                 }).ToList(),
-                Makers = _context.Makers.Select(m => new Maker
+                Makers = _context.Makers.Select(m => new MakerDto
                 {
                     MakerName = m.MakerName,
                     Id = m.Id
                 }).ToList(),
-                Suppliers = _context.Suppliers.Select(s => new Supplier
+                Suppliers = _context.Suppliers.Select(s => new SupplierDto
                 {
                     SupplierName = s.SupplierName,
                     Id = s.Id
