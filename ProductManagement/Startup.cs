@@ -45,16 +45,16 @@ namespace ProductManagement
 
             //ProductSql
             services.AddTransient<IGetProductsCommand, EfGetProductsCommand>();
-            //services.AddTransient<IGetProductInsertData, EfGetProductInsertData>();
-            //services.AddTransient<ICreateProductCommand, EfCreateProductCommand>();
-            //services.AddTransient<IGetProductCommand, EfGetProductCommand>();
-            //services.AddTransient<IEditProductCommand, EfEditProductCommand>();
-            //services.AddTransient<ICreateCategoryCommand, EfCreateCategoryCommand>();
-            //services.AddTransient<ICreateMakerCommand, EfCreateMakerCommand>();
-            //services.AddTransient<ICreateSupplierCommand, EfCreateSupplierCommand>();
+            services.AddTransient<IGetProductInsertData, EfGetProductInsertData>();
+            services.AddTransient<ICreateProductCommand, EfCreateProductCommand>();
+            services.AddTransient<IGetProductCommand, EfGetProductCommand>();
+            services.AddTransient<IEditProductCommand, EfEditProductCommand>();
+            services.AddTransient<ICreateCategoryCommand, EfCreateCategoryCommand>();
+            services.AddTransient<ICreateMakerCommand, EfCreateMakerCommand>();
+            services.AddTransient<ICreateSupplierCommand, EfCreateSupplierCommand>();
 
             //ProductJson
-
+            /*
             services.AddTransient<IGetProductsCommand, JsonGetProductsCommand>();
             services.AddTransient<IGetProductInsertData, JsonGetProductInsertData>();
             services.AddTransient<ICreateProductCommand, JsonCreateProductCommand>();
@@ -63,6 +63,7 @@ namespace ProductManagement
             services.AddTransient<ICreateCategoryCommand, JsonCreateCategoryCommand>();
             services.AddTransient<ICreateMakerCommand, JsonCreateMakerCommand>();
             services.AddTransient<ICreateSupplierCommand, JsonCreateSupplierCommand>();
+            */
 
             services.AddControllersWithViews();
         }
